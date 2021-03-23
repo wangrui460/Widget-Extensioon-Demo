@@ -1,0 +1,23 @@
+
+# platform :ios, '9.0'
+inhibit_all_warnings!
+use_frameworks!
+
+# 共享HandyJSON
+def share_pods
+    pod 'HandyJSON'
+end
+
+# 小组件
+target 'UserPicsExtension' do
+  share_pods
+  pod 'SnapKit', '~> 5.0.0'
+
+end
+
+# APP
+target 'WidgetDemo' do
+  share_pods
+	pod 'Alamofire'
+
+end
